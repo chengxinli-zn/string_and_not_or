@@ -6,7 +6,6 @@ KEYWORD_DICT = {
     "OR": "1",
     "NOT": "1",
 }
-content = '测试后的数据不是可以删除的，发生车祸后，第一时间报警处理'
 
 
 def string_and_not_or(rules: str, content: str):
@@ -30,8 +29,7 @@ def string_and_not_or(rules: str, content: str):
         rules = rules.replace(_str, '1', 1)
     else:
         rules = rules.replace(_str, '0', 1)
-    value = eval(rules.lower())
-    return value
+    return eval(rules.lower())
 
 
 # 方法二：
@@ -48,8 +46,8 @@ def string_and_not_or_2(rules: str, content: str):
                 rules = rules.replace(x, '1', 1)
             else:
                 rules = rules.replace(x, '0', 1)
-    value = eval(rules.lower())
-    return value
+    return eval(rules.lower())
+
 
 if __name__ == '__main__':
     # 规则
